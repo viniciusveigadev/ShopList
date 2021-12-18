@@ -2,6 +2,7 @@ package com.app.shoplist.ui
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.shoplist.databinding.ItemProductsBinding
 import com.app.shoplist.data.model.ProductDetails
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
@@ -61,6 +63,7 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
 
             Glide.with(holder.itemView.context)
                 .load(product.image)
+                .transform(RoundedCorners(10))
                 .into(image)
         }
     }
