@@ -1,4 +1,4 @@
-package com.app.shoplist
+package com.app.shoplist.ui
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.shoplist.databinding.ItemProductsBinding
+import com.app.shoplist.data.model.ProductDetails
 import com.bumptech.glide.Glide
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {

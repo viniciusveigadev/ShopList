@@ -1,4 +1,4 @@
-package com.app.shoplist
+package com.app.shoplist.data.model
 
 data class ProductDetails(
     val address: Address,

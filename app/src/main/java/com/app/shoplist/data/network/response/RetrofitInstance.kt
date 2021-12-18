@@ -1,4 +1,4 @@
-package com.app.shoplist
+package com.app.shoplist.data.network.response
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
