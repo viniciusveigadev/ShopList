@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_700"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toTopOf="@+id/iv_filter" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/iv_dropdown"
         android:layout_width="60dp"
         android:layout_height="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_filter"
