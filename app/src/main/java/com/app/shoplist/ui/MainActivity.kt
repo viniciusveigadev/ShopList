@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpRecyclerView()
+        dropdownButton()
 
         lifecycleScope.launchWhenCreated {
             binding.progressCircular.isVisible = true
@@ -52,5 +53,17 @@ class MainActivity : AppCompatActivity() {
         adapter = productAdapter
         layoutManager =
             LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    private fun dropdownButton() {
+        binding.ivFilter.setOnClickListener {
+            val isMenuVisible = binding.ivDropdownfilters.isVisible
+            binding.ivDropdownfilters.isVisible = !isMenuVisible
+            binding.tvFilter2.isVisible = !isMenuVisible
+            binding.ivLineVector5.isVisible = !isMenuVisible
+            binding.menu.isVisible = !isMenuVisible
+            binding.menu2.isVisible = !isMenuVisible
+            binding.menu3.isVisible = !isMenuVisible
+        }
     }
 }

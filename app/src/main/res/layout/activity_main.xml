@@ -207,6 +207,107 @@
                 app:layout_constraintTop_toTopOf="@+id/iv_filter"
                 app:srcCompat="@drawable/polygon_27" />
 
+            <ImageView
+                android:id="@+id/iv_dropdownfilters"
+                android:layout_width="220dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/bg_round"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_filter2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto"
+                android:text="Filters"
+                android:textColor="@color/white_transparent"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/iv_dropdownfilters"
+                app:layout_constraintTop_toBottomOf="@+id/iv_filter" />
+
+            <ImageView
+                android:id="@+id/iv_line_vector5"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dropdownfilters"
+                app:layout_constraintStart_toStartOf="@+id/iv_dropdownfilters"
+                app:layout_constraintTop_toBottomOf="@+id/firstProductList"
+                app:srcCompat="@drawable/vector104" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Products"
+                android:textColorHint="@color/white"
+                android:visibility="invisible"
+                app:boxBackgroundColor="@color/black_700"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dropdownfilters"
+                app:layout_constraintStart_toStartOf="@+id/iv_dropdownfilters"
+                app:layout_constraintTop_toBottomOf="@+id/iv_line_vector5">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="State"
+                android:textColorHint="@color/white"
+                android:visibility="invisible"
+                app:boxBackgroundColor="@color/black_700"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dropdownfilters"
+                app:layout_constraintStart_toStartOf="@+id/iv_dropdownfilters"
+                app:layout_constraintTop_toBottomOf="@+id/menu">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu3"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="City"
+                android:textColorHint="@color/white"
+                android:visibility="invisible"
+                app:boxBackgroundColor="@color/black_700"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dropdownfilters"
+                app:layout_constraintStart_toStartOf="@+id/iv_dropdownfilters"
+                app:layout_constraintTop_toBottomOf="@+id/menu2">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>
