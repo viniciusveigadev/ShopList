@@ -22,7 +22,6 @@ ShopList
   <a href="#rocket-technologies">Technologies</a> | 
   <a href="#construction_worker-how-to-run">How to run</a> |
   <a href="#zap-features">Features</a> |
-  <a href="#link-contributing">Contributing</a> |
   <a href="#license">License</a> 
 </h3>
 
@@ -35,6 +34,8 @@ ShopList - a lot of products available for you.
   <img src="https://user-images.githubusercontent.com/46942672/146630574-ba020514-5cc8-4ae9-afc1-999f1c997150.jpg" width="215"/>  
   &nbsp; &nbsp;
   <img src="https://user-images.githubusercontent.com/46942672/146630587-42302d2e-3c34-4f9e-9ece-838c1d128240.jpg" width="215"/>
+  &nbsp; &nbsp;
+  <img src="https://user-images.githubusercontent.com/46942672/146716599-2c58bcb9-560b-4d91-be60-57cc3b71a1e0.jpg" width="215"/>
  </div>
  
 ## :rocket: Technologies
