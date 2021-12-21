@@ -1,10 +1,12 @@
 package com.app.shoplist.ui
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         filtersBtn()
         clearFiltersBtn()
         retrofitApiResponse()
+        pullToRefresh()
     }
 
     private fun retrofitApiResponse() {
@@ -129,5 +132,17 @@ class MainActivity : AppCompatActivity() {
             data3
         )
         binding.cityDropdown.setAdapter(adapter3)
+    }
+
+    private fun pullToRefresh() {
+        //Set the colors of the Pull To Refresh View
+        binding.itemsswipetorefresh.setProgressBackgroundColorSchemeColor(ContextCompat.getColor(this, R.color.teal_200))
+        binding.itemsswipetorefresh.setColorSchemeColors(Color.WHITE)
+
+        //Pull to Refresh
+        binding.itemsswipetorefresh.setOnRefreshListener {
+            retrofitApiResponse()
+            binding.itemsswipetorefresh.isRefreshing = false
+        }
     }
 }
