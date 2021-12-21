@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -87,6 +88,7 @@ class MainActivity : AppCompatActivity() {
             binding.productsDropdown.setText("")
             binding.stateDropdown.setText("")
             binding.cityDropdown.setText("")
+            Toast.makeText(this, "Filters has been cleaned", Toast.LENGTH_SHORT).show()
         }
     }
 
