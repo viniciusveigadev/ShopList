@@ -30,7 +30,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpRecyclerView()
-        filterButtonVisibilty()
+        filtersBtn()
+        clearFiltersBtn()
+        retrofitApiResponse()
+    }
+
+    private fun retrofitApiResponse() {
 
         lifecycleScope.launchWhenCreated {
             binding.progressCircular.isVisible = true
@@ -65,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
     }
 
-    private fun filterButtonVisibilty() {
+    private fun filtersBtn() {
         binding.ivFilter.setOnClickListener {
             val isMenuVisible = binding.ivDropdownfilters.isVisible
             binding.ivDropdownfilters.isVisible = !isMenuVisible
@@ -74,6 +79,14 @@ class MainActivity : AppCompatActivity() {
             binding.menu.isVisible = !isMenuVisible
             binding.menu2.isVisible = !isMenuVisible
             binding.menu3.isVisible = !isMenuVisible
+        }
+    }
+
+    private fun clearFiltersBtn() {
+        binding.ivClearFilters.setOnClickListener {
+            binding.productsDropdown.setText("")
+            binding.stateDropdown.setText("")
+            binding.cityDropdown.setText("")
         }
     }
 
