@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpRecyclerView()
-        filtersBtn()
         clearFiltersBtn()
         retrofitApiResponse()
         pullToRefresh()
@@ -74,16 +74,14 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
     }
 
-    private fun filtersBtn() {
-        binding.ivFilter.setOnClickListener {
-            val isMenuVisible = binding.ivDropdownfilters.isVisible
-            binding.ivDropdownfilters.isVisible = !isMenuVisible
-            binding.tvFilter2.isVisible = !isMenuVisible
-            binding.ivLineVector5.isVisible = !isMenuVisible
-            binding.menu.isVisible = !isMenuVisible
-            binding.menu2.isVisible = !isMenuVisible
-            binding.menu3.isVisible = !isMenuVisible
-        }
+    fun filtersBtn(view: View) {
+        val isMenuVisible = binding.ivDropdownfilters.isVisible
+        binding.ivDropdownfilters.isVisible = !isMenuVisible
+        binding.tvFilter2.isVisible = !isMenuVisible
+        binding.ivLineVector5.isVisible = !isMenuVisible
+        binding.menu.isVisible = !isMenuVisible
+        binding.menu2.isVisible = !isMenuVisible
+        binding.menu3.isVisible = !isMenuVisible
     }
 
     private fun clearFiltersBtn() {
@@ -136,7 +134,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun pullToRefresh() {
         //Set the colors of the Pull To Refresh View
-        binding.itemsswipetorefresh.setProgressBackgroundColorSchemeColor(ContextCompat.getColor(this, R.color.teal_200))
+        binding.itemsswipetorefresh.setProgressBackgroundColorSchemeColor(
+            ContextCompat.getColor(
+                this,
+                R.color.teal_200
+            )
+        )
         binding.itemsswipetorefresh.setColorSchemeColors(Color.WHITE)
 
         //Pull to Refresh
